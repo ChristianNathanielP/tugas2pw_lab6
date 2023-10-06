@@ -6,6 +6,32 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
+  <style>
+    .foto:hover{
+      transform: scale(1.3);
+      z-index: 3;
+    }
+    .olip{
+    color: white; 
+    font-size: 35px; 
+    font-weight: bold;
+    transition: color .3s ease-in-out,
+    }
+    .olip:hover {
+    color: #9575DE;
+    }
+
+    .disco{
+    color: white; 
+    font-size: 35px; 
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: color .3s ease-in-out,
+    }
+    .disco:hover {
+    color: #9575DE;
+    }
+  </style>
   <body style="background-color: black;">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   
@@ -37,40 +63,44 @@
     </nav></nav>
 
     <!-- table pertama -->
-     <table  style="width: 100%;">
-        <row>
-          <td>
-            <h1 style="color: white; padding-top: 60px;">LOGIN</h1>
-            <p style="color: white;">Please login to your account</p><br>
-            <!-- Username -->
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label" style="color: white;">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
+    <table  style="width: 100%;">
+      <div class="row " style="margin-left: 1px;">
+        <div class="col">
+          <h1 style="color: white; padding-top: 60px;">LOGIN</h1>
+          <p style="color: white;">Please login to your account</p>
+
+          <!-- Username -->
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label" style="color: white;">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@gmail.com">
             <p style=" color: white;">We'll  never share your email with anyone else.</p>
-            <!-- Password -->
-            <label for="inputPassword5" class="form-label" style="color: white;">Password</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-            <!-- Chechbox -->
-            <div class="form-check mt-3">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-              <label class="form-check-label" for="flexCheckChecked" style="color: white;">
-                Check me out
-              </label>
-            </div>
-            <!-- chechbox 2 -->
+          </div>
+          <!-- Password -->
+          <label for="inputPassword5" class="form-label" style="color: white;">Password</label>
+          <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+          <!-- Checkbox -->
+          <div class="form-check mt-4">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked >
+            <label class="form-check-label" for="flexCheckChecked" style="color: white;">Check me out</label>
+          </div>
+          <!-- Sumbit -->
+          <div class="mt-3">
             <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-            <label class="btn btn-primary" for="btn-check">Sumbit</label>
-          </td>
-          <!-- image -->
-          <td align="center"> 
-            <img src="https://i.scdn.co/image/ab6761610000e5ebe03a98785f3658f0b6461ec4" alt="kosong" style="width: 350px; height: 350px; border-radius: 20px;">
-          </td>
-        </row>>
+            <label class="btn" style="background-color: #5D3FD3		; color: white;" for="btn-check">Sumbit</label>
+          </div>
+        </div>
+
+        <!-- image -->
+        <div class="col" align="center" style="margin-top: 70px;">
+          <img src="https://i.scdn.co/image/ab6761610000e5ebe03a98785f3658f0b6461ec4" alt="kosong" style="width: 350px; height: 350px; border-radius: 20px;">
+        </div>
+      </div>
     </table>
 
-    
-    <p align="center" style="color: white; font-size: 35px; font-weight: bold;">Olivia Rodrigo</p>
+    <!-- Text 1 -->
+    <div align="center" class="olip">
+      Olivia Rodrigo
+    </div>
     <p align="center" style="color: white;">
       Olivia Isabel Rodrigo (born February 20, 2003) is an American singer-songwriter and actress. 
       She gained recognition for her lead roles on the Disney television programs Bizaardvark (2016–2019) and High School Musical: 
@@ -78,17 +108,17 @@
       California, the only child of school teacher Jennifer and family therapist Chris Rodrigo.
     </p>
 
-    <p align="center" style="color: white; font-size: 35px; font-weight: bold;">Discography</p>
-    <p align="center" style="color: white;">
-        Studio Album of Olivia Rodrigo:
-    </p>
-
+    <!-- Text 2 -->
+    <div align="center" class="disco">
+      Discography
+    </div>
 
     <!-- CARD -->
-    <div class="container"> 
+    <div class="container-fluid" align="center"> 
       <div class="row">
         <!-- card 1-->
-        <div class="card col-sm-4" align="center">
+        <div class="col">
+        <div class="card" style="width: 25rem;" align="center">
           <img src="https://upload.wikimedia.org/wikipedia/id/thumb/0/04/SOUR_album.jpg/1200px-SOUR_album.jpg" class="card-img-top" alt="waduu">
           <div class="card-body">
             <h5 class="card-title">SOUR</h5>
@@ -99,9 +129,11 @@
             <a href="https://open.spotify.com/album/6s84u2TUpR3wdUv4NgKA2j?si=oAm8CzN9Qo6mPgKfRz09_g" class="btn btn-dark">Go to Album</a>
           </div>
         </div>
+      </div>
 
         <!-- card 2 -->
-        <div class="card col-sm-4"  align="center" >
+        <div class="col">
+        <div class="card" style="width: 25rem;" align="center">
           <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Olivia_Rodrigo_-_Guts.png" class="card-img-top" alt="waduu">
           <div class="card-body">
             <h5 class="card-title">GUTS</h5>
@@ -112,31 +144,38 @@
             <a href="https://open.spotify.com/album/1xJHno7SmdVtZAtXbdbDZp?si=YlIwdNn_SbC0o2ry3tc1Aw" class="btn btn-dark">Go to Album</a>
         </div>
       </div>
+      </div>
 
       <!-- card 3 -->
-      <div class="card col-sm-4 "align="center">
-        <img src="https://m.media-amazon.com/images/M/MV5BYmEyZmRjMTktMjA0YS00ZWFkLWEyNGUtMGI2ZTZhZmVmNDMyXkEyXkFqcGdeQXVyMjAzMjcxNTE@._V1_.jpg" style="height: 413px;" class="card-img-top" alt="waduu">
-        <div class="card-body">
-          <h5 class="card-title">ALL I WANT</h5>
+      <div class="col">
+      <div class="card" style="width: 25rem;;" align="center" >
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/76/The_Rose_Song_cover.jpeg" class="card-img-top" alt="waduu">
+        <div class="card-body mt-4">
+          <h5 class="card-title">THE ROSE SONG</h5>
           <p class="card-text">
-            "All I Want" is a song written by American singer and songwriter Olivia Rodrigo for the mockumentary television series High School Musical: The Musical: The Series. 
-            It was performed by Rodrigo's character, Nina "Nini" Salazar-Roberts, in the fourth episode of the first season.
+            "The Rose Song" is an original song from High School Musical: The Musical: The Series. The song is sung by Olivia 
+            Rodrigo as Nini Salazar-Roberts in the episode Yes, And...
           </p>
-          <a href="https://open.spotify.com/album/7x6n2jztq7Zlff5xVCfzqB?si=OP4Ne0ubTWqBX6-0rPH5sw" class="btn btn-dark">Go to Album</a>
+          <a href="https://open.spotify.com/album/6TeOuy8VtjfYy52ntsnu1m?si=B7C44-KaTOCZaHwOJ6OOhQ" class="btn btn-dark">Go to Album</a>
       </div>
     </div>
-      </div>
     </div> 
              
 
     <!-- footer -->
-    <div class="mt-5" style="background-color: #33339d; border-radius: 10px;" >
+    <div class="mt-5" style="background-color: #9575DE	; border-radius: 10px;" >
       <h3 class="m-0" align="center" style="color: white; ">OLIVIA</h3>
       <p class="m-0" align="center" style="color: white;">ol.liv.ia</p>
       <p align="center" class="m-2">
-        <img src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" alt="" style="width: 20px; height: 20px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="" style="width: 20px; height: 20px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" style="width: 20px; height: 20px;">
+        <a href="https://www.instagram.com/oliviarodrigo/" style="text-decoration: none;">
+          <img class="foto" src="https://www.unipile.com/wp-content/uploads/2022/09/logo_instagram.png" alt="" style="width: 20px; height: 20px; margin-right: 4px;">
+        </a>
+        <a href="https://twitter.com/oliviarodrigo" style="text-decoration: none;">
+          <img class="foto" src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="" style="width: 20px; height: 20px; margin-right: 4px;">
+        </a>
+        <a href="https://open.spotify.com/artist/1McMsnEElThX1knmY4oliG?si=NH0kMsEhS2iradWAs9CG6g" style="text-decoration: none;">
+          <img class="foto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" alt="" style="width: 20px; height: 20px;">
+        </a>
       </p>
       <p align="center" style="color: white; font-size: 10px;">© copyright Olivia 2023</p>
     </div>
